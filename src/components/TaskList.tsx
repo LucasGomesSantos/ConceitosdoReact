@@ -31,12 +31,12 @@ export function TaskList() {
 
   function handleToggleTaskCompletion(id: number) {
 
-    const newTasks = tasks.map(task => task.id == id ? {
+    const compTasks = tasks.map(task => task.id == id ? {
       ...task,
       isComplete: !task.isComplete
     } : task);
 
-    setTasks(newTasks);
+    setTasks(compTasks);
 
   }
 
